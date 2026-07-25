@@ -84,13 +84,27 @@ h3 {
   border-image-slice: 2% 0% 0% 0%;
   border-image-repeat: round; */
 
-.divider {
+/* .divider {
   border-image-slice: 66 0 150 183;
   border-image-width: 20px 0px 20px 20px;
   border-image-outset: 0px 0px 0px 15px;
   mix-blend-mode: multiply;
   border-image-repeat: repeat;
   border-image-source: url(../Images/bordervertical.png);
+  
+} */
+
+.divider {
+  /* Keep your existing border-image setup */
+  border-image-slice: 66 0 150 183;
+  border-image-width: 20px 0px 20px 20px;
+  border-image-outset: 0px 0px 0px 15px;
+  mix-blend-mode: multiply;
+  border-image-repeat: repeat;
+  border-image-source: url(../Images/bordervertical.png);
+
+  /* Stop the element short of the illustrations */
+  height: calc(100% - 280px); /* Adjust '180px' until it stops right above the illustration */
 }
 
 .rule {
@@ -247,21 +261,30 @@ h3 {
 .linerabbit img {
  position: absolute;
  width: 150px;
- right: 6%;
- top: 25%;
-
+ right: 10%;
+ top: 28%;
+ -webkit-animation: rotating 4s linear infinite;
+  -moz-animation: rotating 4s linear infinite;
+  -ms-animation: rotating 4s linear infinite;
+  -o-animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
 }
 
 .frametext {
   border-style: solid;
-  border-width: 25px;
+  border-width: 8px 8px 22px 8px;
   border-image-source: url("../Images/borderbitmap2.png");
-  border-image-slice: 17% 7% 21% 7%;
+  border-image-slice: 3% 2% 7% 2%;
   border-image-repeat: round;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
 }
 
 .sectionbreak {
@@ -296,6 +319,7 @@ h3 {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   margin: 0px 15px 0px 20px;
 }
 
 
@@ -343,6 +367,41 @@ img.wrapcockroach{
   margin-top: 20px;
 }
 
+.advert1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.advert2 p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 8px;
+  font-weight: bold;
+  font-family: Wellfleet;
+  margin: 0;
+  padding: 2px;
+}
+
+.advert2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.advert2 img {
+  width: 30%;
+}
+
+.stamp1 {
+  -webkit-animation: rotating 4s linear infinite;
+  -moz-animation: rotating 4s linear infinite;
+  -ms-animation: rotating 4s linear infinite;
+  -o-animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
+}
 /* Stack the columns on narrow screens */
 @media (max-width: 700px) {
   .row {
@@ -373,3 +432,33 @@ img.wrapcockroach{
         padding: 2em;
   }
 } */
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
