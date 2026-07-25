@@ -353,6 +353,11 @@ img.wrapcockroach{
     shape-outside: url(../images/Cockroach.png);
     shape-margin: 0.8em;
     shape-image-threshold: 0.5;
+    transition: transform 0.4s ease;
+}
+
+img.wrapcockroach:hover{
+  transform: scale(1.02) rotate(5deg);
 }
 
 .letterl {
@@ -431,7 +436,35 @@ img.wrapcockroach{
   }
 }
 
+.frog {
+  transition: transform 0.4s ease;
+}
+.frog:hover {
+  transform: scale(1.02) rotate(5deg);
+}
 
+.dino {
+  transition: transform 0.4s ease;
+}
+.dino:hover {
+  transform: scale(1.02) rotate(5deg);
+}
+
+.lobster {
+  transition: transform 0.4s ease;
+}
+.lobster:hover {
+  transform: scale(1.02) rotate(5deg);
+}
+
+.headingimage {
+  transform-origin: bottom center;
+  transition: transform 0.4s ease;
+}
+
+.headingimage:hover {
+  transform: scale(1.02);
+}
 /* @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
   .textwrap p::first-letter {
         color: #ffebb5;
