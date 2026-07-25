@@ -161,6 +161,11 @@ h3 {
   font-size: 30px;
 }
 
+p.description{
+  font-style: italic;
+  text-align: center;
+  font-size:1.1em;
+}
 .masthead h1 {
   font-family: Manufacturing Consent;
   font-size: 8em;
@@ -211,11 +216,26 @@ h3 {
 }
 
 .linerabbit {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   border: none;
   height: 14px;
   background: url(../Images/double_border.png) round;
   mix-blend-mode: multiply;
   margin-top: 30px;
+}
+
+.linerabbit img {
+  width: 13%;
+  margin-top: -60px;
+  margin-right: -20px;
+  display: flex;
+ -webkit-animation: rotating 4s linear infinite;
+  -moz-animation: rotating 4s linear infinite;
+  -ms-animation: rotating 4s linear infinite;
+  -o-animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
 }
 
 .headingimage {
@@ -258,17 +278,7 @@ h3 {
   padding: 12px;
 }
 
-.linerabbit img {
- position: absolute;
- width: 150px;
- right: 10%;
- top: 28%;
- -webkit-animation: rotating 4s linear infinite;
-  -moz-animation: rotating 4s linear infinite;
-  -ms-animation: rotating 4s linear infinite;
-  -o-animation: rotating 4s linear infinite;
-  animation: rotating 4s linear infinite;
-}
+
 
 .frametext {
   border-style: solid;
